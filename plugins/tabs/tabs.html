@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../lib/MetroCss/MetroCss.min.css" />
+		<style type="text/css">
+			body,
+			ul,
+			li {
+				margin: 0;
+				padding: 0;
+				font: 12px normal "宋体", Arial, Helvetica, sans-serif;
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #000;
+				font-size: 14px;
+			}
+			
+			#tabbox {
+				width: 600px;
+				overflow: hidden;
+				margin: 0 auto;
+			}
+			
+			.tab_conbox {
+				border: 1px solid #999;
+				border-top: none;
+			}
+			
+			.tab_con {
+				display: none;
+			}
+			
+			.tabs {
+				height: 32px;
+				border-bottom: 1px solid #999;
+				border-left: 1px solid #999;
+				width: 100%;
+			}
+			
+			.tabs li {
+				height: 31px;
+				line-height: 31px;
+				float: left;
+				border: 1px solid #999;
+				border-left: none;
+				margin-bottom: -1px;
+				background: #e0e0e0;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.tabs li a {
+				display: block;
+				padding: 0 20px;
+				border: 1px solid #fff;
+				outline: none;
+			}
+			
+			.tabs li a:hover {
+				background: #ccc;
+			}
+			
+			.tabs .thistab,
+			.tabs .thistab a:hover {
+				background: #fff;
+				border-bottom: 1px solid #fff;
+			}
+			
+			.tab_con {
+				padding: 12px;
+				font-size: 14px;
+				line-height: 175%;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="tabbox">
+			<h1>简洁jQuery滑动门插件 单击切换演示</h1>
+			<ul class="tabs" id="tabs">
+				<li><a href="http://www.51xuediannao.com/js/nav/">导航菜单</a></li>
+				<li><a href="http://www.51xuediannao.com/js/slide/">焦点幻灯片</a></li>
+				<li><a href="http://www.51xuediannao.com/js/gg/">广告代码</a></li>
+				<li><a href="http://www.51xuediannao.com/js/texiao/">网页特效</a></li>
+			</ul>
+			<ul class="tab_conbox" id="tab_conbox">
+				<li class="tab_con">
+					<p>1<span><a href="http://www.51xuediannao.com/">懒人建站</a>只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>2<span><a href="http://www.51xuediannao.com/">懒人建站</a>2只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>3<span><a href="http://www.51xuediannao.com/">懒人建站</a>3只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>4<span><a href="http://www.51xuediannao.com/">懒人建站</a>4只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+			</ul>
+
+			<h1>简洁jQuery滑动门插件 鼠标滑过切换演示</h1>
+			<ul class="tabs" id="tabs2">
+				<li><a href="http://www.51xuediannao.com/js/nav/">导航菜单</a></li>
+				<li><a href="http://www.51xuediannao.com/js/slide/">焦点幻灯片</a></li>
+				<li><a href="http://www.51xuediannao.com/js/gg/">广告代码</a></li>
+				<li><a href="http://www.51xuediannao.com/js/texiao/">网页特效</a></li>
+			</ul>
+			<ul class="tab_conbox" id="tab_conbox2">
+				<li class="tab_con">
+					<p>1<span><a href="http://www.51xuediannao.com/">懒人建站</a>只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>2<span><a href="http://www.51xuediannao.com/">懒人建站</a>2只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>3<span><a href="http://www.51xuediannao.com/">懒人建站</a>3只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+
+				<li class="tab_con">
+					<p>4<span><a href="http://www.51xuediannao.com/">懒人建站</a>4只收录实用和能提高用户体验的代码</span>
+						<br />
+						<span>我们只想解放出你的部分写代码时间来思考更高层次的设计，而不是要你懒惰、拼凑。</span></p>
+				</li>
+			</ul>
+
+		</div>
+
+	</body>
+	<script src="../../lib/jquery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="tabs.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			/*调用方法如下：*/
+			$.tabs("#tabs", "#tab_conbox", "click");
+			$.tabs("#tabs2", "#tab_conbox2", "mouseenter");
+		});
+	</script>
+
+</html>
