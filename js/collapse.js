@@ -2,8 +2,8 @@
 	//隐藏所有消息主体内容
 	$('.mc-collapse-content').hide();
 	//点击标题相对应的内容展开，再次点击后折叠
-	$('.mc-item-icon.mc-bottom').bind("touchend", function() {
-		var _con = $(this).next('.mc-collapse-content');
+	$('.mc-list-item').bind("click", function() {
+		var _con = $(this).find('.mc-collapse-content');
 		if (!_con.hasClass("mc-collapse-show")) {
 			//获取所有的元素
 			var _allCon = $(".mc-list-item div.mc-collapse-content");
