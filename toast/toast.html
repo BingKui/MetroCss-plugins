@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="toast.css" />
+		<style type="text/css">
+			.info {
+				margin-top: 30px;
+				font-family: "微软雅黑";
+			}
+			
+			.info h4 {
+				font-size: 30px;
+				text-indent: 15px;
+			}
+			
+			.info p {
+				text-indent: 15px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #787878;
+				padding: 15px;
+			}
+			
+			button {
+				width: 90%;
+				display: block;
+				border: none;
+				background-color: #007AFF;
+				color: #fff;
+				height: 35px;
+				font-size: 20px;
+				outline: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				-webkit-tap-highlight-color: transparent;
+				/* For some Androids,个人感觉是低版本的安卓，4.0以下 */
+				margin: 30px auto;
+			}
+			
+			input {
+				width: 90%;
+				height: 35px;
+				outline: none;
+				margin: 0 auto;
+				display: block;
+				text-indent: 7px;
+				border-radius: 0;
+				border: 1px solid #ccc;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				-webkit-tap-highlight-color: transparent;
+				/* For some Androids,个人感觉是低版本的安卓，4.0以下 */
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="info">
+			<h4>toast 提示</h4>
+			<p>toast提示在实际应用中非常广泛，主要用来提示一些不太重要，或者重要级别没有那么高的信息。</p>
+		</div>
+		<button onclick="toast.open()">打开toast提示</button>
+		<input type="text" name="demo" id="demo" value="" placeholder="输入想要改变的内容" />
+		<button onclick="toast.setContent($('#demo').val()||'新内容');toast.open();">改变内容并打开</button>
+	</body>
+	<script src="../lib/jquery/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="toast.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var toast = $('body').Toast({
+			text: "这个是提示！",
+			time: 2000
+		});
+	</script>
+
+</html>
